@@ -1,4 +1,5 @@
 <?php
+die();
 /**
  * Application entry point
  *
