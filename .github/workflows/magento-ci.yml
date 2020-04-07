@@ -43,7 +43,9 @@ jobs:
         composer install -n
 
     - name: Link vendor folder to dockroot
-      run: ln -s ${TESTS_DIR}/vendor ./
+      run: |
+        rm -rf ./vendor
+        ln -s ${TESTS_DIR}/vendor ./
 
     - name: Execute tests
       run: |
