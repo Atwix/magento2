@@ -587,14 +587,15 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
      *
      * @return float
      */
+
     public function getPrice()
-    {
-        if ($this->_calculatePrice || !$this->getData(self::PRICE)) {
-            return $this->getPriceModel()->getPrice($this);
-        } else {
-            return $this->getData(self::PRICE);
-        }
-    }
+     {
+         if ($this->_calculatePrice || !$this->getData(self::PRICE)) {
+             return $this->getPriceModel()->getPrice($this);
+         } else {
+             return $this->getData(self::PRICE);
+         }
+     }
 
     /**
      * Get visibility status
