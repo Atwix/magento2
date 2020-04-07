@@ -42,6 +42,7 @@ use Magento\Framework\Pricing\SaleableInterface;
  */
 
 #test
+const atwix-test = "test test test";
 class Product extends \Magento\Catalog\Model\AbstractModel implements
     IdentityInterface,
     SaleableInterface,
