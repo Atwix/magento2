@@ -14,6 +14,8 @@ namespace Magento\Catalog\Model\Product;
  * @author      Magento Core Team <core@magentocommerce.com>
  * @since 100.0.2
  */
+
+# Lorem ipsum dolor sit amet, his quis albucius ut, sea ut adhuc aliquip. Vocent evertitur inciderint pri ex. Quo an dicant electram gubergren, eu sea liber instructior definitionem. An ludus nullam populo sea, cu est nibh fugit apeirian. Ea his impetus invenire contentiones, omnium delicatissimi ut pri, cu vis lorem adipisci. Brute volutpat dissentiet ex vix. Vim no prima impedit aliquando, argumentum neglegentur ne has, populo dissentias ne usu. Quo facete impetus numquam in, detracto praesent efficiendi vix ad. Fugit atqui mei ut, an usu tibique officiis. Cu mea nulla dicit dissentiet. Fugit principes sit in, ei quo mollis saperet omittam. Pri choro quidam id, labore feugait instructior ne his. Te qui partiendo scripserit. Vel noster labitur alienum ex, an sumo integre recusabo eam. Cu omittam rationibus quo. Te est legendos elaboraret honestatis. Ad vitae integre maiorum vis, pro delenit legendos eu. An duo ipsum aliquid imperdiet. Eu velit impedit necessitatibus vel. At eros porro vel. Est exerci tempor at, augue forensibus his no. Eu sea dicit accumsan, utamur scripserit in pro. Veri tollit persecuti vis in, eos et essent pertinax, qui ut vero sapientem. Facilisi perfecto inciderint ad sea, legere percipit pertinax ad nam. Eu duo quot aliquip abhorreant.
 class Action extends \Magento\Framework\Model\AbstractModel
 {
     /**
