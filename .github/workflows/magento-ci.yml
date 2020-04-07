@@ -42,6 +42,9 @@ jobs:
         cd ${TESTS_DIR}
         composer install -n
 
+    - name: Link vendor folder to dockroot
+      run: ln -s ${TESTS_DIR}/vendor ./
+
     - name: Execute tests
       run: |
         chmod +x ${TESTS_DIR}/vendor/atwix/ci-scripts/runCodeSniffer.sh
