@@ -18,7 +18,7 @@ parameters:
           - "die("
           - "var_dump("
           - "exit;"
-          - 'console.log('
+#          - "console.log("
           - "bravo.atwix.com"
       phpmd:
         ruleset:
