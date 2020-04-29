@@ -13,6 +13,7 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+            - run: git fetch ${GITHUB_BASE_REF}
 
             - name: Setup PHP, with composer and extensions
               uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
@@ -45,6 +46,7 @@ jobs:
               run: |
                   git branch -a
                   echo "origin/${GITHUB_BASE_REF}"
+
             - name: Execute tests
               run: |
                   chmod +x ${TESTS_DIR}/vendor/atwix/ci-scripts/runCodeSniffer.sh
