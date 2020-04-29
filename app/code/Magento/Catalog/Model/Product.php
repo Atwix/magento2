@@ -696,7 +696,7 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
      * @param \Magento\Catalog\Model\Product\Type\AbstractType|null $instance  Product type instance
      * @return \Magento\Catalog\Model\Product
      */
-    public function setTypeInstance($instance)
+    public function setTypeInstance($instance, $test_unused)
     {
         $this->_typeInstance = $instance;
         return $this;
