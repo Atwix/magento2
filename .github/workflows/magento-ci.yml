@@ -14,34 +14,34 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            -   name: Setup PHP, with composer and extensions
-                    uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
-                    with:
-                        php-version: 7.2
-                        extensions: mbstring, dom, xml
+            - name: Setup PHP, with composer and extensions
+              uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
+              with:
+                  php-version: 7.2
+                  extensions: mbstring, dom, xml
 
-            -   name: Install plugin to speed up the composeer installation process.
-                run: composer global require hirak/prestissimo
+            - name: Install plugin to speed up the composeer installation process.
+              run: composer global require hirak/prestissimo
 
-            -   name: Configure Composer
-                run: composer config -g github-oauth.github.com ${GITHUB_TOKEN}
+            - name: Configure Composer
+              run: composer config -g github-oauth.github.com ${GITHUB_TOKEN}
 
-            -   name: Create working directory
-                run: mkdir ${TESTS_DIR}
+            - name: Create working directory
+              run: mkdir ${TESTS_DIR}
 
-            -   name: Installing toolkit for static tests
-                run: |
-                    cp .github/static-tests/composer.json ${TESTS_DIR}
-                    cd ${TESTS_DIR}
-                    composer install -n
-            -   name: Link vendor folder to dockroot
-                run: |
-                    rm -rf ./vendor
-                    ln -s ${TESTS_DIR}/vendor ./
-            -   name: Dump autoload
-                run: composer dump-autoload
+            - name: Installing toolkit for static tests
+              run: |
+                  cp .github/static-tests/composer.json ${TESTS_DIR}
+                  cd ${TESTS_DIR}
+                  composer install -n
+            - name: Link vendor folder to dockroot
+              run: |
+                  rm -rf ./vendor
+                  ln -s ${TESTS_DIR}/vendor ./
+            - name: Dump autoload
+              run: composer dump-autoload
 
-            -   name: Execute tests
-                run: |
-                    chmod +x ${TESTS_DIR}/vendor/atwix/ci-scripts/runCodeSniffer.sh
-                    ${TESTS_DIR}/vendor/atwix/ci-scripts/runCodeSniffer.sh origin/${GITHUB_BASE_REF} ./grumphp.yml
+            - name: Execute tests
+              run: |
+                  chmod +x ${TESTS_DIR}/vendor/atwix/ci-scripts/runCodeSniffer.sh
+                  ${TESTS_DIR}/vendor/atwix/ci-scripts/runCodeSniffer.sh origin/${GITHUB_BASE_REF} ./grumphp.yml
