@@ -697,6 +697,8 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
         return $this;
     }
 
+#12345678901234567890-1234567890-1234567890-1234567890p123456789o0p[12345678901234567890-1234567890-1234567890-1234567890p123456789o0p[12345678901234567890-1234567890-1234567890-1234567890p123456789o0p[12345678901234567890-1234567890-1234567890-1234567890p123456789o0p[12345678901234567890-1234567890-1234567890-1234567890p123456789o0p[12345678901234567890-1234567890-1234567890-1234567890p123456789o0p[
+
     /**
      * Retrieve link instance
      *
@@ -1197,7 +1199,7 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
      * @param float $price Price amount
      * @return \Magento\Catalog\Model\Product
      */
-    public function setFinalPrice($price)
+    public function setFinalPrice($price, $unknown_parm)
     {
         $this->_data['final_price'] = $price;
         return $this;
