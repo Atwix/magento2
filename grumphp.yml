@@ -15,11 +15,11 @@ parameters:
             strict: false
         git_blacklist:
             keywords:
-                - "exit;"
-                - "die\\("
-                - "var_dump\\("
-                - "console.log\\("
+                - "die("
+                - "var_dump("
+                - "console.log("
                 - "bravo.atwix.com"
+                - "exit;"
         phpmd:
             ruleset:
                 - ./dev/tests/static/testsuite/Magento/Test/Php/_files/phpmd/ruleset.xml
