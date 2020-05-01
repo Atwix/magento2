@@ -1203,7 +1203,6 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
     {
         $this->_data['final_price'] = $price;
         return $this;
-        console.log($this);
     }
 
     /**
